@@ -11,5 +11,5 @@ data class Usuario(
         val password: String?,
         @NotEmpty
         val admin: Boolean = false,
-        @Id val id: String? = null
+        @Id var id: String? = null
 )

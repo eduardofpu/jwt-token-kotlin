@@ -13,11 +13,16 @@ class JwtTokenKotlinApplication(val usuarioRepository: UsuarioRepository) : Comm
     override fun run(vararg args: String?) {
         usuarioRepository.deleteAll()
 
-        val gerarBcrypt = SenhaUtil().gerarBcrypt("123456")
-        val usuario: Usuario = Usuario("oda", "oda@gmail.com", gerarBcrypt,true)
-        usuarioRepository.save(usuario)
+        val gerarBcryptAdmin = SenhaUtil().gerarBcrypt("admin")
+        val usuarioAdmin: Usuario = Usuario("Admin", "admin@admin.com", gerarBcryptAdmin,true)
+        usuarioRepository.save(usuarioAdmin)
 
-        System.out.println("Nome: " + usuario.username)
+        val gerarBcryptUser = SenhaUtil().gerarBcrypt("user")
+        val user: Usuario = Usuario("User", "user@user.com", gerarBcryptUser,false)
+        usuarioRepository.save(user)
+
+        System.out.println("Nome do Administrador: " + usuarioAdmin.username)
+        System.out.println("Usuário comum: " + user.username)
 
     }
 }

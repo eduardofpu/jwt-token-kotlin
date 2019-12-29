@@ -3,15 +3,16 @@ package com.jwt.jwttokenkotlin.controller
 import com.jwt.jwttokenkotlin.Errors.Response
 import com.jwt.jwttokenkotlin.dtos.UsuarioDtos
 import com.jwt.jwttokenkotlin.model.Usuario
+import com.jwt.jwttokenkotlin.representation.UserResp
 import com.jwt.jwttokenkotlin.services.UsuarioServices
 import com.jwt.jwttokenkotlin.util.SenhaUtil
+import org.springframework.data.domain.Page
+import org.springframework.data.domain.Pageable
+import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.validation.BindingResult
 import org.springframework.validation.ObjectError
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 import javax.validation.Valid
 
 @RestController
@@ -42,6 +43,24 @@ class UsuarioController(val usuarioServices: UsuarioServices) {
         return ResponseEntity.ok(response)
     }
 
+    @GetMapping("/admin/users")
+    fun listUsers(pageable: Pageable): Page<UserResp> {
+
+        return  usuarioServices.listUsers(pageable)
+    }
+
+    @PutMapping("/admin/updateuser/{id}")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    fun updateUser(@PathVariable("id") id: String, @RequestBody usuardio: Usuario): Usuario{
+        return usuarioServices.updateUser(id, usuardio)
+    }
+
+    @DeleteMapping("/admin/deleteuser/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    fun deleteUser(@PathVariable("id") id: String){
+        usuarioServices.deleteUser(id)
+    }
+
     private fun validarUsuario(usuarioDtos: UsuarioDtos, result: BindingResult) {
         if (usuarioDtos.username == null) {
             result.addError(ObjectError("usuario",
@@ -61,4 +80,7 @@ class UsuarioController(val usuarioServices: UsuarioServices) {
         }
         return Usuario(usuarioDtos.username, usuarioDtos.email, SenhaUtil().gerarBcrypt(usuarioDtos.password), usuarioDtos.admin, usuarioDtos.id)
     }
+
+
+
 }
