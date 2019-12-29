@@ -27,15 +27,12 @@ class UsuariosServiceImpl(val usuarioRepository: UsuarioRepository) : UsuarioSer
     }
 
     override fun updateUser(id: String, usuario: Usuario): Usuario {
-
         validatorId(id)
         usuario.id = id
         return usuarioRepository.save(usuario)
     }
 
-
     override fun deleteUser(id: String): Nothing {
-
         validatorId(id)
         val idUser = usuarioRepository.findById(id)
         usuarioRepository.delete(idUser.get())
@@ -46,6 +43,7 @@ class UsuariosServiceImpl(val usuarioRepository: UsuarioRepository) : UsuarioSer
 
      **/
     private fun validatorId(id: String): Nothing {
+        log.info("========= Error interno no Servidor =========")
         throw InternalErrorServer("Error ===> id = " + id)
     }
 }
