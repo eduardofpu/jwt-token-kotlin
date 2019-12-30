@@ -1,21 +1,19 @@
 package com.jwt.jwttokenkotlin.services.impl
 
-import com.jwt.jwttokenkotlin.exception.messege.InternalErrorServer
-import com.jwt.jwttokenkotlin.exception.log.Log
 import com.jwt.jwttokenkotlin.model.Usuario
 import com.jwt.jwttokenkotlin.model.UsuarioBuilder
 import com.jwt.jwttokenkotlin.repository.UsuarioRepository
 import com.jwt.jwttokenkotlin.representation.UserResp
 import com.jwt.jwttokenkotlin.services.UsuarioServices
+import com.jwt.jwttokenkotlin.services.ValidatorService
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Service
 import java.util.*
 
 @Service
-class UsuariosServiceImpl(val usuarioRepository: UsuarioRepository) : UsuarioServices {
-
-    companion object : Log()
+class UsuariosServiceImpl(val validatorService: ValidatorService,
+                          val usuarioRepository: UsuarioRepository) : UsuarioServices {
 
     override fun buscarPorId(id: String): Optional<Usuario>? = usuarioRepository.findById(id)
 
@@ -27,25 +25,17 @@ class UsuariosServiceImpl(val usuarioRepository: UsuarioRepository) : UsuarioSer
     }
 
     override fun updateUser(id: String, usuario: Usuario): Usuario {
-        validatorId(id)
+        validatorService.validatorId(id)
         usuario.id = id
         return usuarioRepository.save(usuario)
     }
 
-    override fun deleteUser(id: String): Nothing {
-        validatorId(id)
+    override fun deleteUser(id: String) {
+        validatorService.validatorId(id)
         val idUser = usuarioRepository.findById(id)
         usuarioRepository.delete(idUser.get())
     }
 
-    /**
-     Se o id não estiver presente retorno um erro interno
-
-     **/
-    private fun validatorId(id: String): Nothing {
-        log.info("========= Error interno no Servidor =========")
-        throw InternalErrorServer("Error ===> id = " + id)
-    }
 }
 
 

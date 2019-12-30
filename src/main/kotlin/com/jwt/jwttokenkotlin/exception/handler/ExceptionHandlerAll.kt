@@ -14,8 +14,8 @@ import java.util.*
 @ControllerAdvice
 class ExceptionHandlerAll : ResponseEntityExceptionHandler() {
 
-     @ExceptionHandler( InternalErrorServer::class)
-     fun handleExceptionInternal(ex: InternalErrorServer): ResponseEntity<Detail> {
+    @ExceptionHandler(InternalErrorServer::class)
+    fun handleExceptionInternal(ex: InternalErrorServer): ResponseEntity<Detail> {
 
         val errorDetails = Builder()
                 .timestamp(Date().time)
