@@ -1,5 +1,6 @@
 package com.jwt.jwttokenkotlin.services
 
+import com.jwt.jwttokenkotlin.dtos.UsuarioDtoId
 import com.jwt.jwttokenkotlin.model.Usuario
 import com.jwt.jwttokenkotlin.representation.UserResp
 import org.springframework.data.domain.Page

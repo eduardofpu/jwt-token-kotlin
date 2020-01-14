@@ -8,6 +8,7 @@ import com.jwt.jwttokenkotlin.services.UsuarioServices
 import com.jwt.jwttokenkotlin.services.ValidatorService
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
+import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Service
 import java.util.*
 
@@ -32,8 +33,10 @@ class UsuariosServiceImpl(val validatorService: ValidatorService,
 
     override fun deleteUser(id: String) {
         validatorService.validatorId(id)
-        val idUser = usuarioRepository.findById(id)
-        usuarioRepository.delete(idUser.get())
+        val idUser = usuarioRepository.findByIdOrNull(id)
+        if (idUser != null) {
+            usuarioRepository.delete(idUser)
+        }
     }
 
 }

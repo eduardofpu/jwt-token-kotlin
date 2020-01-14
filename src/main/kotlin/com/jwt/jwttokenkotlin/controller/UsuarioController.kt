@@ -10,13 +10,14 @@ import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
+import org.springframework.security.core.Authentication
 import org.springframework.validation.BindingResult
 import org.springframework.validation.ObjectError
 import org.springframework.web.bind.annotation.*
 import javax.validation.Valid
 
 @RestController
-@RequestMapping("v1")
+@RequestMapping(path = ["v1"])
 class UsuarioController(val usuarioServices: UsuarioServices) {
 
     /**
@@ -43,19 +44,20 @@ class UsuarioController(val usuarioServices: UsuarioServices) {
         return ResponseEntity.ok(response)
     }
 
-    @GetMapping("/admin/users")
-    fun listUsers(pageable: Pageable): Page<UserResp> {
+    @GetMapping("admin/users")
+    fun listUsers(pageable: Pageable, authentication:Authentication): Page<UserResp> {
+
+        println(authentication.principal)
 
         return  usuarioServices.listUsers(pageable)
     }
-
-    @PutMapping("/admin/updateuser/{id}")
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    fun updateUser(@PathVariable("id") id: String, @RequestBody usuardio: Usuario): Usuario{
+    @PutMapping("admin/edit/{id}")
+    @ResponseStatus(HttpStatus.CREATED)
+    fun updateUser(@PathVariable("id") id: String, @RequestBody usuardio: Usuario, authentication:Authentication): Usuario{
         return usuarioServices.updateUser(id, usuardio)
     }
 
-    @DeleteMapping("/admin/deleteuser/{id}")
+    @DeleteMapping("admin/del/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     fun deleteUser(@PathVariable("id") id: String){
         usuarioServices.deleteUser(id)

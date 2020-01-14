@@ -1,5 +1,6 @@
 package com.jwt.jwttokenkotlin.services.impl
 
+import com.jwt.jwttokenkotlin.dtos.UsuarioDtoId
 import com.jwt.jwttokenkotlin.exception.log.Log
 import com.jwt.jwttokenkotlin.exception.messege.InternalErrorServer
 import com.jwt.jwttokenkotlin.services.ValidatorService
@@ -14,8 +15,15 @@ class ValidatorServiceImpl : ValidatorService {
     Se o id não estiver presente retorna um erro interno
 
      **/
-    override fun validatorId(id: String): Nothing {
-        log.info("========= Error interno no Servidor =========")
-        throw InternalErrorServer("Error ===> id = " + id)
+    override fun validatorId(id: String): String {
+        val codigo = id
+
+        if(codigo==null){
+            log.info("========= Error interno no Servidor =========")
+            throw InternalErrorServer("Error ===> id = " + id)
+        }else {
+            return  codigo
+        }
+
     }
 }
