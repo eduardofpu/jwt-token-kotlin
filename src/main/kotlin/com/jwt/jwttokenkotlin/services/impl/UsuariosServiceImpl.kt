@@ -1,5 +1,6 @@
 package com.jwt.jwttokenkotlin.services.impl
 
+import com.jwt.jwttokenkotlin.model.UserLogin
 import com.jwt.jwttokenkotlin.model.Usuario
 import com.jwt.jwttokenkotlin.model.UsuarioBuilder
 import com.jwt.jwttokenkotlin.repository.UsuarioRepository
@@ -15,6 +16,14 @@ import java.util.*
 @Service
 class UsuariosServiceImpl(val validatorService: ValidatorService,
                           val usuarioRepository: UsuarioRepository) : UsuarioServices {
+
+    override fun email(email: String): Boolean {
+        val findByEmail = usuarioRepository.findByEmail(email)
+        if(findByEmail==null){
+            println("Error")
+        }
+        return findByEmail.admin
+    }
 
     override fun buscarPorId(id: String): Optional<Usuario>? = usuarioRepository.findById(id)
 

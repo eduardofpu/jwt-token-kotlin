@@ -2,6 +2,7 @@ package com.jwt.jwttokenkotlin.controller
 
 import com.jwt.jwttokenkotlin.Errors.Response
 import com.jwt.jwttokenkotlin.dtos.UsuarioDtos
+import com.jwt.jwttokenkotlin.model.UserLogin
 import com.jwt.jwttokenkotlin.model.Usuario
 import com.jwt.jwttokenkotlin.representation.UserResp
 import com.jwt.jwttokenkotlin.services.UsuarioServices
@@ -42,6 +43,14 @@ class UsuarioController(val usuarioServices: UsuarioServices) {
         usuarioServices.create(usuario)
         response.data = converterUsuarioDtos(usuario)
         return ResponseEntity.ok(response)
+    }
+
+    @PostMapping("/email")
+    @ResponseStatus(HttpStatus.OK)
+    fun listUsers(@RequestBody email: UserLogin): Boolean {
+
+        val userPrincipal = email.email
+        return  usuarioServices.email(userPrincipal)
     }
 
     @GetMapping("admin/users")
