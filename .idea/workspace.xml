@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="192909fc-bd3e-464f-89d5-acfc4612a281" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/jwt/jwttokenkotlin/config/JWTAuthenticationFilter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/jwt/jwttokenkotlin/config/JWTAuthenticationFilter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/jwt/jwttokenkotlin/controller/UsuarioController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/jwt/jwttokenkotlin/controller/UsuarioController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/jwt/jwttokenkotlin/services/UsuarioServices.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/jwt/jwttokenkotlin/services/UsuarioServices.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/jwt/jwttokenkotlin/services/impl/UsuariosServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/jwt/jwttokenkotlin/services/impl/UsuariosServiceImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jwt/jwttokenkotlin/config/JWTAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jwt/jwttokenkotlin/config/JWTAuthenticationFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jwt/jwttokenkotlin/controller/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jwt/jwttokenkotlin/controller/UsuarioController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jwt/jwttokenkotlin/services/UsuarioServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jwt/jwttokenkotlin/services/UsuarioServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jwt/jwttokenkotlin/services/impl/UsuariosServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jwt/jwttokenkotlin/services/impl/UsuariosServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,7 +16,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/jwt/jwttokenkotlin/controller/UsuarioController.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
+            <state relative-caret-position="700">
               <caret line="50" selection-start-line="50" selection-end-line="50" />
             </state>
           </provider>
@@ -212,7 +204,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -220,73 +212,11 @@
               <item name="jwt-token-kotlin" type="b2602c69:ProjectViewProjectNode" />
               <item name="jwt-token-kotlin" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="jwt-token-kotlin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jwt-token-kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jwt-token-kotlin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jwt-token-kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jwt-token-kotlin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jwt-token-kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jwt-token-kotlin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jwt-token-kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="jwttokenkotlin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jwt-token-kotlin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jwt-token-kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="jwttokenkotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jwt-token-kotlin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jwt-token-kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="jwttokenkotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jwt-token-kotlin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jwt-token-kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="jwttokenkotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jwt-token-kotlin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jwt-token-kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="jwttokenkotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -428,12 +358,13 @@
       <workItem from="1580312823978" duration="1440000" />
       <workItem from="1580346679343" duration="8333000" />
       <workItem from="1580386979648" duration="1271000" />
-      <workItem from="1580395879017" duration="1199000" />
+      <workItem from="1580395879017" duration="2654000" />
+      <workItem from="1580473910021" duration="71000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116719000" />
+    <option name="totallyTimeSpent" value="118245000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="-2" width="1920" height="1082" extended-state="6" />
@@ -445,10 +376,10 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.19423692" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.19637139" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32990867" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.5147059" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5147059" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.41095892" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -457,7 +388,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.15966387" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32648402" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32563025" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
@@ -715,7 +646,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/jwt/jwttokenkotlin/controller/UsuarioController.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
+        <state relative-caret-position="700">
           <caret line="50" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>

@@ -1,6 +1,5 @@
 package com.jwt.jwttokenkotlin.services.impl
 
-import com.jwt.jwttokenkotlin.model.UserLogin
 import com.jwt.jwttokenkotlin.model.Usuario
 import com.jwt.jwttokenkotlin.model.UsuarioBuilder
 import com.jwt.jwttokenkotlin.repository.UsuarioRepository
